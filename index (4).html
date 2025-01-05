@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recommendation-banner {
+            position: fixed;
+            bottom: calc(60px + 20px); /* disclaimer-banner와 간격 추가 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%; /* 반응형 */
+            max-width: 320px; /* 최대 너비 */
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .recommendation-banner:hover {
+            transform: translateX(-50%) translateY(-3px);
+        }
+
+        .recommendation-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .product-image {
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info strong {
+            display: block;
+            color: #2575fc;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .product-info p {
+            color: #666;
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .disclaimer-banner {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            background: #f5f5f5;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- 추천 상품 배너 -->
+    <a href="[쿠팡 파트너스 링크]" class="recommendation-banner">
+        <div class="recommendation-content">
+            <img src="/api/placeholder/50/50" alt="중학생 영단어" class="product-image">
+            <div class="product-info">
+                <strong>오늘의 추천 학습도구</strong>
+                <p>중학생 공부 고민 해결! EBS 워크북</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- 주의사항 배너 -->
+    <div class="disclaimer-banner">
+        <p>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    </div>
+</body>
+</html>
